@@ -37,7 +37,7 @@ export default function TriageScreen() {
       toValue: -Dimensions.get("window").width,
       ...animationCofig
     }).start(() => {
-      if (option.assignedLabel) mutation.mutate(option.assignedLabel);
+      if (option.assignedLabel) return mutation.mutate(option.assignedLabel);
       if (option.nextStep) setNextStep(option.nextStep);
 
       ref.current.setValue(Dimensions.get("window").width);
